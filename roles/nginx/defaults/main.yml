@@ -1,0 +1,7 @@
+---
+
+nginx_worker_process: 3
+
+nginx_listen_ports:
+  - 80
+  - 81

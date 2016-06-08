@@ -1,0 +1,14 @@
+---
+- name: install EPEL package
+  yum: name="epel-release" state="latest"
+
+- name: create document root
+  file:
+    path: /var/www/html
+    state: directory
+
+- name: install nginx package
+  yum: name={{ item }} state=latest 
+  with_items: "{{ nginx_packages }}"
+  tags:
+   nginx

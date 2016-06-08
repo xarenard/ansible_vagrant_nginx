@@ -1,0 +1,5 @@
+[web_servers]
+nginx-debian-8 ansible_ssh_host=127.0.0.1 ansible_pass=vagrant ansible_ssh_port=2222
+nginx-centos-7 ansible_ssh_host=127.0.0.1 ansible_pass=vagrant ansible_ssh_port=2200
+
+

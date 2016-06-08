@@ -1,0 +1,7 @@
+---
+- name: install nginx package
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items: "{{ nginx_packages }}"
+  when: ("ansible_os_family == 'Debian'")
+  tags:
+    nginx
